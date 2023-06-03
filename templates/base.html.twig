@@ -5,7 +5,7 @@
         <title>The Banana project</title>
 
         <!-- Mobile -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimal-ui">
 
         <!-- favicon -->
         <link rel="icon" type="image/png" href="/img/icon.png">
@@ -15,6 +15,26 @@
         <meta name="theme-color" content="#ffff00">
         <script src="/service-worker.js"></script>
         <script src="/js/pwa.js"></script>
+
+        {# PWA config #}
+        {# https://gist.github.com/hal0gen/5852bd9db240c477f20c #}
+
+        <!-- Allow web app to be run in full-screen mode - iOS. -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- Allow web app to be run in full-screen mode - Android. -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <!-- iOS icons -->
+        <link rel="apple-touch-icon" sizes="96x96" href="/maskable_icon_x96.png">
+        <link rel="apple-touch-icon" sizes="128x128" href="/maskable_icon_x128.png">
+        <link rel="apple-touch-icon" sizes="192x192" href="/maskable_icon_x192.png">
+        <link rel="apple-touch-icon" sizes="512x512" href="/maskable_icon_x512.png">
+        <!-- Android icons -->
+        <link rel="icon" type="image/png" sizes="96x96" href="/maskable_icon_x96.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="/maskable_icon_x128.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/maskable_icon_x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="/maskable_icon_x512.png">
+
+
 
         <!-- CSS -->
         <link rel="stylesheet" href="/css/style.css">

@@ -1,6 +1,7 @@
 {
   "name": "The Banana Project",
-  "short_name": "the-banana-project",
+  "short_name": "Banana Project",
+  "description": "Let's have some fun with bananas!",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -12,7 +13,31 @@
       "src": "/img/icon.png",
       "type": "image/png",
       "sizes": "512x512",
-        "purpose": "any maskable"
+      "purpos": "any"
+    },
+    {
+      "src": "/img/maskable_icon_x96.png",
+      "type": "image/png",
+      "sizes": "96x96",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/img/maskable_icon_x128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/img/maskable_icon_x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/img/maskable_icon_x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ]
 }
