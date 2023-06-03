@@ -18,6 +18,12 @@ main {
     min-height: 100vh;
 }
 
-main img {
+#notifications img {
     max-width: 80vw;
+    -webkit-tap-highlight-color: transparent;
 }
+#notifications {
+    -webkit-tap-highlight-color: transparent;
+}
+
+DATABASE_URL=mysql://raphael:aecooFahB0ir@localhost:3306/raphael_authopless?serverVersion=mariadb-10.5.15
