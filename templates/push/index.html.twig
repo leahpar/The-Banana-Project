@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <main>
+        <div id="notifications" style="cursor: pointer">
+            <img src="/img/icon.png">
+        </div>
+    </main>
+
+    <script src="/js/push.js"></script>
+    <script>
+
+        const button = document.getElementById('notifications');
+        button.addEventListener('click', () => {
+            subscribeUserToPush();
+            // get background color
+            const backgroundColor = document.body.style.backgroundColor;
+            // make background blink
+            document.body.style.backgroundColor = '#ffff00';
+            setTimeout(() => {
+                document.body.style.backgroundColor = backgroundColor;
+            }, 100);
+        });
+    </script>
+
+{% endblock body %}
