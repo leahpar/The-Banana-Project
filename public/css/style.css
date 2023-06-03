@@ -17,3 +17,7 @@ main {
     justify-content: center;
     min-height: 100vh;
 }
+
+main img {
+    max-width: 80vw;
+}
