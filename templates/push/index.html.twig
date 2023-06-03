@@ -14,6 +14,9 @@
         const button = document.getElementById('notifications');
         button.addEventListener('click', () => {
             subscribeUserToPush();
+
+            navigator.vibrate(100);
+
             // get background color
             const backgroundColor = document.body.style.backgroundColor;
             // make background blink
