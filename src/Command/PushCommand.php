@@ -73,7 +73,7 @@ class PushCommand extends Command
             if ($report->isSuccess()) {
                 $io->writeln("Message sent successfully for <comment>{$endpoint}</comment>");
             } else {
-                $io->error("Message failed to sent for subscription {$endpoint}: {$report->getReason()}");
+                $io->writeln("<error>KO</error> Message failed to sent for subscription {$endpoint}: {$report->getReason()}");
             }
         }
 
