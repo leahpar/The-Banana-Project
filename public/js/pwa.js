@@ -1,11 +1,11 @@
-
-navigator.serviceWorker
-    .register('/service-worker.js')
-    .then(function (registration) {
-        console.log('Service worker successfully registered.');
-        return registration;
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+        navigator.serviceWorker
+            .register("/service-worker.js")
+            .then(res => console.log("[OK] Service worker registered"))
+            .catch(err => console.log("[ERR] Service worker not registered", err))
     })
-    .catch(function (err) {
-        console.error('Unable to register service worker.', err);
-    });
-
+}
+else {
+    console.log('[WARNING] Service worker is not supported.');
+}
