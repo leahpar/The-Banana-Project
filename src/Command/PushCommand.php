@@ -59,9 +59,12 @@ class PushCommand extends Command
             $users = $this->em->getRepository(User::class)->findAll();
         }
 
+        // NB: Apple demands that the VAPID subject is a valid URL or "mailto: address"
+        // https://stackoverflow.com/a/75554966/11105345
+        // https://developer.apple.com/documentation/usernotifications/sending_web_push_notifications_in_web_apps_safari_and_other_browsers
         $webPush = new WebPush([
             'VAPID' => [
-                'subject' => 'bananaproject.inara.ovh',
+                'subject' => 'https://bananaproject.inara.ovh',
                 'publicKey' => $this->vapidPublicKey,
                 'privateKey' => $this->vapidPrivateKey,
             ]
